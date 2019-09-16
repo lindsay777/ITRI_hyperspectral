@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles  %}
+
+{% block content %}
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <blockquote>
+    (1) Origin Image:<br>
+    <img src="{{ image_origin }}" alt="origin" width="340" height="400"><br>
+    (2) Kmeans:<br>
+    <img src="{{ image_kmeans }}" alt="kmeans"><br>
+    (3) PCA+Kmeans:<br>
+    <img src="{{ image_pca_kmeans }}" alt="pcakmeans"><br>
+
+    {{ ori_shape }}
+  </blockquote>
+  
+{% endblock %}
