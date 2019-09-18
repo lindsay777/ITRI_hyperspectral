@@ -2,17 +2,57 @@
 {% load staticfiles  %}
 
 {% block content %}
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <blockquote>
-    (1) Origin Image:<br>
-    <img src="{{ image_origin }}" alt="origin" width="340" height="400"><br>
-    (2) Kmeans:<br>
-    <img src="{{ image_kmeans }}" alt="kmeans"><br>
-    (3) PCA+Kmeans:<br>
-    <img src="{{ image_pca_kmeans }}" alt="pcakmeans"><br>
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">Origin</th>
+      <th scope="col">PCA + Kmeans</th>
+      <th scope="col">Kmeans</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><img src="{{ image_origin }}" alt="origin" width="340" height="400"></th>
+      <td><img src="{{ image_kmeans }}" alt="kmeans"></td>
+      <td><img src="{{ image_pca_kmeans }}" alt="pcakmeans"></td>
+    </tr>
+  </tbody>
+</table>
+original data shape: {{ ori_shape }}<br>
+pca dimension reduction shape: {{ pca_shape }}<br>
+clustering number: {{ clus_num }}<br>
+<br>
+<table class="table text-center">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">label 0</th>
+      <th scope="col">label 1</th>
+      <th scope="col">label 2</th>
+      <th scope="col">label 3</th>
+      <th scope="col">label 4</th>
+      <th scope="col">label 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>807805</td>
+      <td>1601100</td>
+      <td>1561091</td>
+      <td>1234069</td>
+      <td>731236</td>
+      <td>111747</td>
+    </tr>
+    <tr>
+      <td>807805</td>
+      <td>1598537</td>
+      <td>1560782</td>
+      <td>1237208</td>
+      <td>731091</td>
+      <td>111625</td>
+    </tr>
+  </tbody>
+</table>
+total absolute difference: 6278 (0.1%)<br>
 
-    {{ ori_shape }}
-  </blockquote>
-  
 {% endblock %}
