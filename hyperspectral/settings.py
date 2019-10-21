@@ -25,7 +25,7 @@ SECRET_KEY = 'h3v3x^ay&)!k#0qpl4*mhv-b0g(2rzp(qz8y7p9ef%4ko^!_zs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['polar-arbor-250703.appspot.com']
 
 
 # Application definition
